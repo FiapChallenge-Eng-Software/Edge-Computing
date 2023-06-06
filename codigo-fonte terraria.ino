@@ -114,7 +114,7 @@ void loop() {
       int piscadas = 6;
       int delayPisc = 417;//fazendo durar 2500 ms
       
-      //faz o led vermelho piscar enquanto a bomba fica ligada
+      //faz o led verde piscar enquanto a bomba fica ligada
       for (int i = 0; i < piscadas; i++) {
   		digitalWrite(ledVerde, HIGH);
   		delay(delayPisc);
@@ -144,7 +144,7 @@ void loop() {
     // exibe a temperatura ambiente no display após quualquer leitura de umidade
     digitalWrite(ledAzul, HIGH);
     digitalWrite(ledVerm, LOW);
-    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledVerde, HIGH);
     lcd.setCursor(0, 0);
     lcd.print("Temperatura: ");
     lcd.setCursor(0, 1);
