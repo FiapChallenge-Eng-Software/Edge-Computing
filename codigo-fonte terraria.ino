@@ -48,14 +48,14 @@ void loop() {
 	
   if (irrecv.decode(&results)) {
     unsigned int codRec = results.value;  
-    //recebe sinal do controle
+    //quando recebe sinal do controle
     
     Serial.print("Codigo Infravermleho Binario = ");
     Serial.print(codRec);
     Serial.print("    /    ");
     Serial.print("Codigo Infravermleho Hexadecimal = ");
     Serial.println(codRec, HEX);
-    irrecv.resume();
+    irrecv.resume();//recebe novo sinal
 
     if (codRec == 65535) { // Código do botão do controle remoto
       if (!sistemaLigado) {
